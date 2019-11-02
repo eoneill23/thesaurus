@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <Header />
+    <WordSearchForm />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Header from './components/Header.vue'
+import WordSearchForm from './components/WordSearchForm.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+   Header,
+   WordSearchForm
   }
 }
 </script>
@@ -23,6 +25,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
 }
 </style>
