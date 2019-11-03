@@ -1,27 +1,24 @@
 <template>
-  <nav>
-    <h1 class='title'>Welcome to Thesaurus!</h1>
-  </nav>
+  <section>
+
+  </section>
 </template>
 
 <script>
 
 export default {
-  name: 'Header'
+  name: 'WordCard',
+  props: ['synonym'],
 }
 </script>
 
 <style scoped>
-nav {
+section {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: gray;
-  height: 50px;
-}
-
-.title {
-  margin: 0;
+  background-color: purple;
+  height: 80vh;
 }
 </style>
