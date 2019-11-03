@@ -1,21 +1,21 @@
 <template>
   <main>
-    <section v-for='(synonym) in this.synonyms'>
-      {{synonym.meta.id}}
+    <section class='prompt' v-if='!this.synonyms.length'>
+      Enter a word in the form above to find its synonyms!
+    </section>
+    <section class='word-card' v-else-if='this.synonyms.length' v-for='(synonym) in this.synonyms'>
+      <h3>{{synonym.meta.id}}</h3>
+      <ul>
+        <li v-for='(word) in synonym.meta.syns[0]'>{{ word }}</li>
+      </ul>
     </section>
   </main>
 </template>
 
 <script>
 import WordCard from './WordCard.vue'
-
 export default {
   name: 'WordContainer',
-  data () {
-    return {
-      wordCards: []
-    }
-  },
   props: ['synonyms']
 }
 </script>
@@ -26,7 +26,30 @@ main {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: purple;
+  background-color: lightblue;
   height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.prompt {
+  height: 20%;
+  padding-top: 30px;
+  width: 50%;
+}
+
+.word-card {
+  border: 1px solid black;
+  height: 30%;
+  margin: 10px;
+  overflow: scroll;
+  width: 20%;
+}
+
+h3 {
+  margin-top: 0;
+  border-bottom: 1px solid black;
 }
 </style>

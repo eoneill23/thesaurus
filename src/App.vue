@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <form>
-      <input v-model='word'></input>
+      <input v-model='word' placeholder='Enter a word...'></input>
       <button v-on:click='searchSynonyms'>Search</button>
     </form>
     <WordContainer :synonyms='synonyms'/>
@@ -22,7 +22,7 @@ export default {
   data () {
   return {
     word: '',
-    synonyms: [{name: 'Hello'}]
+    synonyms: []
   }
   },
   methods: {
@@ -30,8 +30,8 @@ export default {
       e.preventDefault()
       try {
         const result = await getSynonyms(this.word)
-        console.log(result)
         this.synonyms = result
+        this.word = ''
       } catch (error) {
         console.log(error)
       }
