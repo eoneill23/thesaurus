@@ -5,7 +5,7 @@
       <input v-model='word' placeholder='Enter a word...'></input>
       <button v-on:click='searchSynonyms'>Search</button>
     </form>
-    <WordContainer :synonyms='synonyms'/>
+    <WordContainer :synonyms='synonyms' @update-word='updateWord'/>
   </div>
 </template>
 
@@ -35,6 +35,10 @@ export default {
       } catch (error) {
         console.log(error)
       }
+    },
+    updateWord: function(value) {
+      this.word = value
+      this.searchSynonyms({preventDefault: () => {}})
     }
   }
 }
