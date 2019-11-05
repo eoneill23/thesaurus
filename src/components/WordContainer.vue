@@ -28,7 +28,6 @@ main {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: lightblue;
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -37,21 +36,22 @@ main {
 }
 
 .prompt {
+  font-size: 3rem;
   height: 20%;
   padding-top: 30px;
-  width: 50%;
+  width: 90%;
 }
 
 .word-card {
-  border: 1px solid black;
-  height: 30%;
+  height: 10%;
   margin: 10px;
-  overflow: scroll;
-  width: 20%;
+  width: 30%;
 }
 
 h3 {
-  margin-top: 0;
+  border: 1px solid black;
   border-bottom: 1px solid black;
+  font-size: 4rem;
+  margin-top: 0;
 }
 </style>

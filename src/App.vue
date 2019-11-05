@@ -55,4 +55,30 @@ export default {
   height: 100vh;
   width: 100%;
 }
+
+form {
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  padding: 10px;
+}
+
+input {
+  font-size: 1.5rem;
+  height: 2rem;
+  width: 15rem;
+}
+
+::placeholder {
+  font-size: 1.5rem;
+}
+
+button {
+  height: 2.35rem;
+  width: 6rem;
+}
+
+body {
+  margin: 0;
+}
 </style>

@@ -14,11 +14,12 @@ export default {
 <style scoped>
 nav {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 3rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: gray;
-  height: 50px;
+  height: 7rem;
 }
 
 .title {
